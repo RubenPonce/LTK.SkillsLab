@@ -3,15 +3,10 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
-import PersonAdd from '@mui/icons-material/PersonAdd';
-import Settings from '@mui/icons-material/Settings';
-import Logout from '@mui/icons-material/Logout';
-import {Link, Outlet} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import Button from '@mui/material/Button';
 export default function AccountMenu({ onClick, openForm }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -27,7 +22,7 @@ export default function AccountMenu({ onClick, openForm }) {
         <Typography sx={{ minWidth: 100 }}>Contact</Typography>
         <Typography sx={{ minWidth: 100 }}>profile</Typography>
         <Tooltip title="Account settings">
-          <IconButton
+          <Button
             onClick={handleClick}
             size="small"
             sx={{ ml: 2 }}
@@ -36,7 +31,7 @@ export default function AccountMenu({ onClick, openForm }) {
             aria-expanded={open ? 'true' : undefined}
           >
             <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
-          </IconButton>
+          </Button>
         </Tooltip>
       </Box>
       <Menu
